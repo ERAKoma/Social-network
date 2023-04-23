@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>307818569339-hmcn4e7n2i9npkej8mbsa3slcjnlbsen.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.307818569339-hmcn4e7n2i9npkej8mbsa3slcjnlbsen</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCJ2oTT_ozRjWu9VjNQW7LTWuTKYPoLQ1A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>307818569339</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.ashesiSocial</string>
+	<key>PROJECT_ID</key>
+	<string>daafua-ashesi-social</string>
+	<key>STORAGE_BUCKET</key>
+	<string>daafua-ashesi-social.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:307818569339:ios:7a9da56c9d22054c784cde</string>
+</dict>
+</plist>

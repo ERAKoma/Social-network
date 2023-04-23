@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "307818569339",
+    "project_id": "daafua-ashesi-social",
+    "storage_bucket": "daafua-ashesi-social.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307818569339:android:7c8cd2d7c15e191c784cde",
+        "android_client_info": {
+          "package_name": "com.example.ashesi_social"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307818569339-p1iivnv5pt6iaag2ucpsl2srk445qfq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnDh8USCT43WXXGwLtcBiNPsxExvkbp7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307818569339-p1iivnv5pt6iaag2ucpsl2srk445qfq5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "307818569339-hmcn4e7n2i9npkej8mbsa3slcjnlbsen.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ashesiSocial"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
