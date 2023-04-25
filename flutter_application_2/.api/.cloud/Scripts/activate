@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\afeny\Desktop\Web Tech\Labs\.cloud"
+VIRTUAL_ENV="C:\Users\afeny\Desktop\Web Tech\Project\dev2\flutter_application_2\.api\.cloud"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

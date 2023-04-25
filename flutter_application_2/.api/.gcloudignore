@@ -12,6 +12,7 @@
 # below:
 .git
 .gitignore
+.cloud
 
 # Python pycache:
 __pycache__/

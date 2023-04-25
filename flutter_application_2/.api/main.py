@@ -1,18 +1,17 @@
 import firebase_admin
 from firebase_admin import firestore
 from flask import Flask, jsonify, request
-from flask_cors import CORS, cross_origin
-# from waitress import serve
+from flask_cors import CORS
 
 
 default_app = firebase_admin.initialize_app()
 db = firestore.client()
 
 app = Flask(__name__)
-cors = CORS(app, resources=r'/*', allow_headers='*', origins='*')
+CORS(app)
 
-users_ref = db.collection('users')
-posts_ref = db.collection('posts')
+users_ref = db.collection(u'users')
+posts_ref = db.collection(u'posts')
 
 # Display users
 @app.route("/users", methods=["GET"])
@@ -25,7 +24,7 @@ def get_users():
 def create_user():
   req_json = request.get_json()
   user_dict = {
-    "name": req_json["user"],
+    "name": req_json["name"],
     "dob": req_json["dob"],
     "email": req_json["email"],
     "major": req_json["major"],
@@ -34,7 +33,7 @@ def create_user():
     "best_food": req_json["best_food"],
     "best_movie": req_json["best_movie"]
   }
-  user_ref = users_ref.document(req_json["user"])
+  user_ref = users_ref.document(req_json["name"])
   if user_ref.get().exists:
     return jsonify({"message": "User already exists."}), 400
   else:
@@ -68,24 +67,24 @@ def delete_user(user):
   else:
     return jsonify({"message": "User not found."}), 404
 
+
 # Create post
 @app.route("/posts", methods=["POST"])
-@cross_origin(origin='*', headers=['Content-Type'])
 def create_post():
-    data = request.get_json()
-    email = data["email"]
-    content = data["content"]
-    # Access posts collection:
-    for doc in posts_ref.stream():
-        if doc.to_dict().get("email") == email:
-            break
-    else:
-    # Add new document to posts collection:
-        posts_ref.add({"email":email, "content": content})
-        return jsonify({"message": "Post created successfully"}), 201
-
-    return jsonify({"success": True}), 200
+    req_json = request.get_json()
+    if "email" not in req_json:
+        return jsonify({"message": "Email field not found"}), 400
+    if "content" not in req_json:
+        return jsonify({"message": "Content field not found"}), 400
     
+    email = req_json["email"]
+    content = req_json["content"]
+
+    post_ref = posts_ref.document(email)
+    post_ref.set({"email":email, "content": content})
+    
+    return jsonify({"message": "Post created successfully"}), 201
+
 
 # Get posts
 @app.route("/posts", methods=["GET"])
